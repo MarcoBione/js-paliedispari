@@ -5,3 +5,15 @@
     background-color: black;
 }
 /* main page end */
+
+a{
+    padding: 0.5rem;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+a:hover{
+    color: black!important;
+    background-color: white!important;
+    border-radius: 5px;
+}
