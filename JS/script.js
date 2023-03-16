@@ -36,7 +36,7 @@ function evenOddGame(){
 
     if((randomNumber % 2 === 0 && evenOdd === 'even') || (randomNumber % 3 === 0 && evenOdd === 'odd')){
         result.innerText = `Hai vinto!`;
-        result.classList.add('text-green');
+        result.classList.add('text-success');
         console.log(result);
         document.getElementById('results').appendChild(result);
 
@@ -48,7 +48,7 @@ function evenOddGame(){
     //}
     else{
         result.innerText = `Ritenta, sarai piu fortunato la prossima volta`;
-        result.classList.add('text-red');
+        result.classList.add('text-danger');
         console.log(result);
         document.getElementById('results').appendChild(result);
     }
