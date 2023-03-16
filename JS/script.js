@@ -38,23 +38,22 @@ function evenOddGame(){
     let result = document.createElement('p');
 
     if((randomNumber % 2 === 0 && evenOdd === 'even') || (randomNumber % 3 === 0 && evenOdd === 'odd')){
-        result.innerText = `Hai vinto!`;
+        result.innerText = `Numero estratto: ${randomNumber} - Hai vinto!`;
         result.classList.add('text-success');
         console.log(result);
         document.getElementById('results').appendChild(result);
 
-    }//else if (randomNumber % 3 === 0 && evenOdd === 'odd'){
-        //result.innerText = `Hai vinto!`;
-        //result.classList.add('text-green');
-        //console.log(result);
-        //document.getElementById('results').appendChild(result);
-    //}
-    else{
-        result.innerText = `Ritenta, sarai piu fortunato la prossima volta`;
+    }else if (evenOdd == ''){
+        result.innerText = `Seleziona un opzione per poter giocare!`;
+        result.classList.add('text-warning');
+        console.log(result);
+        document.getElementById('results').appendChild(result);
+    }else{
+        result.innerText = `Numero estratto: ${randomNumber} - Ritenta, sarai piu fortunato la prossima volta`;
         result.classList.add('text-danger');
         console.log(result);
         document.getElementById('results').appendChild(result);
-    }
+    };
 
 
-}
+};
