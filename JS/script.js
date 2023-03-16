@@ -18,6 +18,9 @@ Consigli del giorno:
 
 */
 
+
+//---------------------EVEN ODD GAME---------------------
+
 const btnEvenOdd = document.getElementById('checkEvenOdd');
 btnEvenOdd.addEventListener('click', evenOddGame);
 
