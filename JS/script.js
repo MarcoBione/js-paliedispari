@@ -17,3 +17,27 @@ Consigli del giorno:
 2. Scriviamo sempre solo un pezzetto di codice alla volta, se funziona allora andiamo avanti.
 
 */
+
+const btnEvenOdd = document.getElementById('checkEvenOdd');
+btnEvenOdd.addEventListener('click', evenOddGame);
+
+
+function evenOddGame(){
+    //load evenOdd value
+    let evenOdd = document.querySelector('select').value;
+    //check evenOdd
+    console.log(evenOdd);
+
+    //generation random number
+    let randomNumber = Math.floor((Math.random() * 5) + 1);
+    console.log(randomNumber);
+
+    if(randomNumber % 2 === 0 && evenOdd === 'even'){
+        const result = document.createElement('p');
+        result.innerText = "E' uscito il numero: ${'randomNumber'}"
+        console.log(result);
+        document.getElementById('results').appendChild(result);
+    }
+
+
+}
