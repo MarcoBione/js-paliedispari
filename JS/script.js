@@ -32,9 +32,23 @@ function evenOddGame(){
     let randomNumber = Math.floor((Math.random() * 5) + 1);
     console.log(randomNumber);
 
-    if(randomNumber % 2 === 0 && evenOdd === 'even'){
-        const result = document.createElement('p');
-        result.innerText = "E' uscito il numero: ${'randomNumber'}"
+    let result = document.createElement('p');
+
+    if((randomNumber % 2 === 0 && evenOdd === 'even') || (randomNumber % 3 === 0 && evenOdd === 'odd')){
+        result.innerText = `Hai vinto!`;
+        result.classList.add('text-green');
+        console.log(result);
+        document.getElementById('results').appendChild(result);
+
+    }//else if (randomNumber % 3 === 0 && evenOdd === 'odd'){
+        //result.innerText = `Hai vinto!`;
+        //result.classList.add('text-green');
+        //console.log(result);
+        //document.getElementById('results').appendChild(result);
+    //}
+    else{
+        result.innerText = `Ritenta, sarai piu fortunato la prossima volta`;
+        result.classList.add('text-red');
         console.log(result);
         document.getElementById('results').appendChild(result);
     }
