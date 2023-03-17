@@ -31,14 +31,28 @@ function evenOddGame(){
     //check evenOdd
     console.log(evenOdd);
 
+    let userChoise = 0;
+    //load evenOdd value
+    userChoise = document.querySelector('input').value;
+    //check evenOdd
+    console.log(userChoise);
+
     //generation random number
     let randomNumber = Math.floor((Math.random() * 5) + 1);
     console.log(randomNumber);
 
+    let sum = mySum(userChoise, randomNumber);
+    console.log(sum);
+
+    function mySum(a, b) {
+      return a + b;         
+    }
+    
+
     let result = document.createElement('p');
 
-    if((randomNumber % 2 === 0 && evenOdd === 'even') || (randomNumber % 3 === 0 && evenOdd === 'odd')){
-        result.innerText = `Numero estratto: ${randomNumber} - Hai vinto!`;
+    if((sum % 2 === 0 && evenOdd === 'even') || (sum % 3 === 0 && evenOdd === 'odd')){ //da chiedere domani
+        result.innerText = `Numero estratto: ${sum} - Hai vinto!`;
         result.classList.add('text-success');
         console.log(result);
         document.getElementById('results').appendChild(result);
@@ -49,7 +63,7 @@ function evenOddGame(){
         console.log(result);
         document.getElementById('results').appendChild(result);
     }else{
-        result.innerText = `Numero estratto: ${randomNumber} - Ritenta, sarai piu fortunato la prossima volta`;
+        result.innerText = `Numero estratto: ${sum} - Ritenta, sarai piu fortunato la prossima volta`;
         result.classList.add('text-danger');
         console.log(result);
         document.getElementById('results').appendChild(result);
