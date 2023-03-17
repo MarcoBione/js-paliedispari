@@ -45,7 +45,7 @@ function evenOddGame(){
     console.log(sum);
 
     function mySum(a, b) {
-      return a + b;         
+      return a + b;         //<--- non mi fa la somma però mette i due numeri uno accanto all'altro.. non capisco come mai
     }
     
 
